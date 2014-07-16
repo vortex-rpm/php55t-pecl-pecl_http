@@ -93,7 +93,7 @@ fi
 %defattr(-, root, root, -)
 %doc %{pecl_name}-%{version}/CREDITS %{pecl_name}-%{version}/Exceptions.txt %{pecl_name}-%{version}/KnownIssues.txt %{pecl_name}-%{version}/LICENSE %{pecl_name}-%{version}/ThanksTo.txt
 %config(noreplace) %{_sysconfdir}/php.d/%{pecl_name}.ini
-%{php_extdir}/%{pecl_name}.so
+%{php_extdir}/http.so
 %{pecl_xmldir}/%{pecl_name}.xml
 
 
