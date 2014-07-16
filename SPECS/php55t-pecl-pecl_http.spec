@@ -20,6 +20,8 @@ URL: http://pecl.php.net/package/%{pecl_name}
 
 Source: http://pecl.php.net/get/%{pecl_name}-%{version}.tgz
 
+Requires: php55t-pecl-raphf, php55t-pecl-propro
+
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear, zlib-devel, php55t-pecl-raphf-devel, php55t-pecl-propro-devel
 Requires(post): %{__pecl}
