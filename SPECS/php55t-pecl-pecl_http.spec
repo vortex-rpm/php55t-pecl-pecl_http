@@ -45,6 +45,16 @@ It provides powerful request functionality with support for
 parallel requests.
 
 
+%package devel
+Group: Development/Languages
+Summary: files needed to build PHP extensions
+Provides: %{name}-devel = %{version}-%{release}
+Provides: %{real_name}-devel = %{version}-%{release}
+
+%description devel
+Development files for pecl_http.
+
+
 %prep
 %setup -c -n %{real_name}-%{version} -q
 
@@ -96,6 +106,10 @@ fi
 %{php_extdir}/http.so
 %{pecl_xmldir}/%{pecl_name}.xml
 
+
+%files devel
+%defattr(-, root, root, -)
+%{_includedir}/php/ext/http/*
 
 %changelog
 * Wed Jul 16 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 2.0.7-1.vortex
