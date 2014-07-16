@@ -12,7 +12,7 @@
 Summary: HTTP extension
 Name: %{php_base}-pecl-pecl_http
 Version: 2.0.7
-Release: 1.vortex%{?dist}
+Release: 2.vortex%{?dist}
 License: PHP
 Group: Development/Languages
 Vendor: Vortex RPM
@@ -75,7 +75,9 @@ cd %{pecl_name}-%{version}
 %{__mkdir_p} %{buildroot}%{_sysconfdir}/php.d
 %{__cat} > %{buildroot}%{_sysconfdir}/php.d/%{pecl_name}.ini << 'EOF'
 ; Enable %{pecl_name} extension module
-extension=%{pecl_name}.so
+extension=raphf.so
+extension=propro.so
+extension=http.so
 
 EOF
 
@@ -112,5 +114,8 @@ fi
 %{_includedir}/php/ext/http/*
 
 %changelog
+* Wed Jul 16 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 2.0.7-2.vortex
+- I officialy hate all the people involved in the PHP project.
+
 * Wed Jul 16 2014 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 2.0.7-1.vortex
 - Initial packaging.
